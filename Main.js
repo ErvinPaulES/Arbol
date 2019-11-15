@@ -19,9 +19,27 @@ class Main{
         document.querySelector('#buscar').addEventListener('click', () => {
             console.log("Si entra");
             
-            var buscador = document.getElementById('buscador').value;
+            var buscador = Number(document.getElementById('buscador').value);
             var tablabusca = document.querySelector('#bodybuscar')
             view._buscar(buscador, tablabusca);
+        })
+        document.querySelector('#Mostrarinorder').addEventListener('click', () => {
+            console.log("Si entra");
+            
+            var reporte = document.getElementById('inorder');
+            view._mostrarInOrder(reporte);
+        })
+        document.querySelector('#Mostrarpreorder').addEventListener('click', () => {
+            console.log("Si entra");
+            
+            var reporte = document.getElementById('preorder');
+            view._mostrarPreOrder(reporte);
+        })
+        document.querySelector('#Mostrarposorder').addEventListener('click', () => {
+            console.log("Si entra");
+            
+            var reporte = document.getElementById('posorder');
+            view._mostrarPosOrder(reporte);
         })
     }
     

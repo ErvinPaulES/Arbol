@@ -42,13 +42,24 @@ export default class View{
         let cellDescripcion = row.insertCell(4);
         console.log(this._registro.raiz);
         let r = this._registro._encontrarArticulo(buscador.codigo, this._registro.raiz)
+        console.log(r);
+        
         if(r !== null){
-            cellCodigo.innerHTML = r.codigo
+            cellCodigo.innerHTML = r.codigo;
             cellNombre.innerHTML =r.nombre;
             cellPrecio.innerHTML = r.precio;
             cellCantidad.innerHTML = r.cantidad;
             cellDescripcion.innerHTML = r.descripcion;
         }
+    }
+    _mostrarInOrder(reporte){
+
+    }
+    _mostrarPreOrder(reporte){
+
+    }
+    _mostrarPosOrder(reporte){
+
     }
 
 }

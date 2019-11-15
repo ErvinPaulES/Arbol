@@ -5,7 +5,7 @@ export default class Articulo{
         this._precio = precio;
         this._cantidad = cantidad;
         this._descripcion = descripcion;
-        this._izquirda = null;
+        this._izquierda = null;
         this._derecha = null;
     }
     get nombre(){
@@ -23,8 +23,8 @@ export default class Articulo{
     get descripcion(){
         return this._descripcion;
     }
-    get izquirda(){
-        return this._izquirda;
+    get izquierda(){
+        return this._izquierda;
     }
     get derecha(){
         return this._derecha;
@@ -45,8 +45,8 @@ export default class Articulo{
     set descripcion(descripcion){
         this._descripcion = descripcion;
     }
-    set izquirda(izquirda){
-        this._izquirda = izquirda;
+    set izquierda(izquirda){
+        this._izquierda = izquirda;
     }
     set derecha(derecha){
         this._derecha = derecha;

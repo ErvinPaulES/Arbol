@@ -7,23 +7,25 @@ export default class Registro{
       }
   
       _encontrarArticulo(codigo, ultimo){
+        let r;
         if(codigo === ultimo.codigo){
-          return ultimo;
+          r = ultimo;
         }else{
           if(codigo>ultimo.codigo){
             if(ultimo.derecha===null){
-              return null;
+              r = null;
             }else{
-              this._encontrarArticulo(codigo, ultimo.derecha)
+              r = this._encontrarArticulo(codigo, ultimo.derecha)
             }
           }else{
             if(ultimo.izquierda===null){
-              return null;
+              r = null;
             }else{
-              this._encontrarArticulo(codigo, ultimo.izquierda)
+              r = this._encontrarArticulo(codigo, ultimo.izquierda)
             }
           }
         }
+        return r;
       }
   
       agregarArticulo(articulo){
@@ -56,6 +58,7 @@ export default class Registro{
           }
         
       }
+      console.log(this._raiz)
     }
   
       
