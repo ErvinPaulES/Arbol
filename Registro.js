@@ -60,6 +60,33 @@ export default class Registro{
       }
       console.log(this._raiz)
     }
+  _posOrder(valor, posorder){
+      if(valor.izquierda!=null){
+          this._posOrder(valor.izquierda)
+      }
+      if(valor.derecha != null){
+          this._posOrder(valor.derecha)
+      }
+      posorder.innerHTML+= valor.codigo + " ";
+  }
+  _preOrder(valor, preorder){
+    preorder.innerHTML+= valor.codigo + " ";
+    if(valor.izquierda!=null){
+        this._preOrder(valor.izquierda)
+    }
+    if(valor.derecha != null){
+        this._preOrder(valor.derecha)
+    }
+  }
+  _inOrder(valor, inorder){
+    if(valor.izquierda!=null){
+        this._inOrder(valor.izquierda)
+    }
+    inorder.innerHTML+= valor.codigo + " ";
+    if(valor.derecha != null){
+        this._inOrder(valor.derecha)
+    }
+  }
   
       
-  }
+}

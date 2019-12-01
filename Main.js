@@ -26,20 +26,18 @@ class Main{
         document.querySelector('#Mostrarinorder').addEventListener('click', () => {
             console.log("Si entra");
             
-            var reporte = document.getElementById('inorder');
-            view._mostrarInOrder(reporte);
+            view._mostrarInOrder(document.getElementById('inorder'));
         })
         document.querySelector('#Mostrarpreorder').addEventListener('click', () => {
             console.log("Si entra");
             
-            var reporte = document.getElementById('preorder');
-            view._mostrarPreOrder(reporte);
+            view._mostrarPreOrder(document.getElementById('preorder'));
         })
         document.querySelector('#Mostrarposorder').addEventListener('click', () => {
             console.log("Si entra");
             
-            var reporte = document.getElementById('posorder');
-            view._mostrarPosOrder(reporte);
+           
+            view._mostrarPosOrder(document.getElementById('posorder'));
         })
     }
     

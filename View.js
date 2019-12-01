@@ -53,13 +53,13 @@ export default class View{
         }
     }
     _mostrarInOrder(reporte){
-
+        this._registro._inOrder(this._registro.raiz,reporte)
     }
     _mostrarPreOrder(reporte){
-
+        this._registro._preOrder(this._registro.raiz,reporte)
     }
     _mostrarPosOrder(reporte){
-
+        this._registro._posOrder(this._registro.raiz,reporte)
     }
 
 }
