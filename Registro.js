@@ -62,29 +62,29 @@ export default class Registro{
     }
   _posOrder(valor, posorder){
       if(valor.izquierda!=null){
-          this._posOrder(valor.izquierda)
+          this._posOrder(valor.izquierda, posorder)
       }
       if(valor.derecha != null){
-          this._posOrder(valor.derecha)
+          this._posOrder(valor.derecha, posorder)
       }
       posorder.innerHTML+= valor.codigo + " ";
   }
   _preOrder(valor, preorder){
     preorder.innerHTML+= valor.codigo + " ";
     if(valor.izquierda!=null){
-        this._preOrder(valor.izquierda)
+        this._preOrder(valor.izquierda,preorder)
     }
     if(valor.derecha != null){
-        this._preOrder(valor.derecha)
+        this._preOrder(valor.derecha, preorder)
     }
   }
   _inOrder(valor, inorder){
     if(valor.izquierda!=null){
-        this._inOrder(valor.izquierda)
+        this._inOrder(valor.izquierda, inorder)
     }
     inorder.innerHTML+= valor.codigo + " ";
     if(valor.derecha != null){
-        this._inOrder(valor.derecha)
+        this._inOrder(valor.derecha, inorder)
     }
   }
   
